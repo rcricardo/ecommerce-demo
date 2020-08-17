@@ -17,13 +17,14 @@ steps:
 
 - task: Npm@1
   inputs:
-    command: 'custom'
-    customCommand: 'i -g exp'
+    command: 'install'
 
 - task: Npm@1
   inputs:
-    command: 'install'
+    command: 'custom'
+    workingDir: 'test'
 
-- task: CmdLine@2
+- task: Npm@1
   inputs:
-    script: 'expo start'
+    command: 'custom'
+    workingDir: 'run publish'
