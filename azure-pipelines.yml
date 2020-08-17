@@ -22,9 +22,9 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: 'test'
+    customCommand: 'test'
 
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: 'run publish'
+    customCommand: 'run publish'
